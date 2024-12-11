@@ -9,8 +9,9 @@ const app = express()
 app.use(express.json())
 
 
-app.get('/usuarios', (req, res) => {
+app.get('/usuarios', async (req, res) => {
 
+    const users = await prisma.user.findMany()
 
     res.status(200).json(users)
 })
