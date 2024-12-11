@@ -20,3 +20,10 @@ app.post('/usuarios', (req, res) => {
 
 
 app.listen(3000)
+
+
+/*
+Mongodb
+Username: samuelferreirainocencio
+Password: M8GU1t24P6smrkOG
+*/
