@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import {
     PrismaClient
 } from '@prisma/client'
@@ -7,6 +8,7 @@ const prisma = new PrismaClient()
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 
 app.get('/usuarios', async (req, res) => {
@@ -25,7 +27,7 @@ app.post('/usuarios', async (req, res) => {
         }
     })
 
-    console.log(user)
+    // console.log(user)
 
     res.status(201).json(user)
 })
@@ -42,7 +44,7 @@ app.put('/usuarios/:id', async (req, res) => {
         }
     })
 
-    console.log(user)
+    // console.log(user)
 
     res.status(200).json(user)
 })
@@ -70,5 +72,3 @@ Mongodb
 Username: samuelferreirainocencio
 Password: M8GU1t24P6smrkOG
 */
-
-// Concluída aula 13 - Criando o primeiro banco de dados
